@@ -6,19 +6,75 @@
     </head>
         <body>
 
-          <div class="one"> Username: </div> <div class="two"><input type='text' placeholder="Meme123" /> </div>
+          <div class="one" id='msg'> Username: </div> <div class="two"><input type='text' placeholder="Meme123" /> </div>
 
           <div class="one"> Email: </div><div class="two"> <input type='text' placeholder="me@me.com" /> </div>
 
-          <div class="one"> Password: </div><div class="two"> <input type='password' /> </div>
+          <div class="one" id='pass'> Password: </div><div class="two"> <input type='password' id='myPass' /> </div>
 
-          <div class="one"> Repeat Password: </div><div class="two"> <input type='password' /> </div>
+          <div class="one" id="repass"> Repeat Password: </div><div class="two"> <input type='password' id='rePass'/> </div>
 
-          <div class="one"> Telephone: </div><div class="two"> <input type='text' /> </div>
+          <div class="one" id ='phone'> Telephone: </div><div class="two"> <input type='text' id='myPhone' /> </div>
 
-          <div class="one"> Country: </div><div class="two"> <input type='text' /> </div>
+          <div class="one" id="country"> Country: </div><div class="two"> <input type='text' id="inCountry" /> </div>
 
-          <button type="submit" class="one"> Sumbit</button>
+          <button type="submit" id="signBtn" class="one" onclick="erLength()"> Sumbit</button>
+
+
+          <script type="text/javascript">
+
+
+          function erLength(){
+            var passwordleng = document.getElementById('myPass');
+            var password = passwordleng.value;
+          
+            if(password.length<6){
+              document.getElementById('pass').innerHTML = "Password is too short";
+              document.getElementById('pass').style.backgroundColor = 'red';
+            }else{
+              document.getElementById('pass').innerHTML = "Your password is "+password;
+              document.getElementById('pass').style.backgroundColor = 'green';
+            }
+
+            var passing = document.getElementById('rePass');
+            var passed = passing.value;
+
+            if(passed === password){
+              document.getElementById('repass').innerHTML = "Password Matched";
+              document.getElementById('repass').style.backgroundColor = 'green';
+            }else{
+              document.getElementById('repass').innerHTML = "No Match";
+              document.getElementById('repass').style.backgroundColor = 'red';
+            }
+        
+            var countryput = document.getElementById('inCountry');
+            var countr = countryput.value;
+
+           if (countr === 'israel'){
+              document.getElementById('country').innerHTML = " Welcome :) " + countr;
+              document.getElementById('country').style.backgroundColor = 'aqua';           
+           } else {
+              document.getElementById('country').innerHTML = "Not Accepting " + countr;
+              document.getElementById('country').style.backgroundColor = 'red';
+           }
+
+            var phoneleng = document.getElementById('myPhone');
+            var phones = phoneleng.value;
+
+            if(phones.length>15){
+              document.getElementById('phone').innerHTML = "too many numbers";
+              document.getElementById('phone').style.backgroundColor = 'red';
+            }else{
+              document.getElementById('phone').innerHTML = "Phone IS good";
+              document.getElementById('phone').style.backgroundColor = 'green';
+
+           }  
+
+
+         }
+
+        
+          </script>
 
 
 
