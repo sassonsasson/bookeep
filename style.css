@@ -1,0 +1,12 @@
+    .one {
+      display: inline;
+      width: 15%;
+      float: left;
+
+    }
+
+    .two {
+      display: inline;
+      width: 85%;
+      float: left;    
+    }
