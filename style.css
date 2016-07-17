@@ -2,7 +2,14 @@
       display: inline;
       width: 15%;
       float: left;
+      text-align: center;
 
+
+    }
+
+    button {
+      text-decoration: none;
+      padding: 10px;
     }
 
     .two {
@@ -10,3 +17,4 @@
       width: 85%;
       float: left;    
     }
+
