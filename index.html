@@ -8,10 +8,20 @@
 
          <div id='outerdiv' name='div1' data-info='foo' class='box1'>
          <div id='innerdiv' name='div2' data-info='bar' class='box2'>
-                <p id='t1'>Welcome to our Book Store</p>
+               <p id ='t3' onclick="alert('Read more books')">Welcome to our Book Store</p>
                 <p id='t2'>Buy more books - now!</p>
             </div>
+
+         <script type="text/javascript">
+            var func1 = function func1(){
+              console.log("2");
+               document.getElementById('t3').innerHTML = "Read More Books";
+            }
+            document.getElementById('t3').onclick = func1;
+       </script>
+
         </div>
+
           
        <a href="login.html">Login</a>
        <a href="signup.html">SignUp</a>   
